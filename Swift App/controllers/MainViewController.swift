@@ -16,23 +16,26 @@ UITableViewDelegate {
     
     var emojies : [Emoji] = []
     
+    var viewModel: ViewModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.viewModel = ViewModel()
         self.emojies = makeEmojiArr()
-        // Do any additional setup after loading the view, typically from a nib.
+        
         tableView.dataSource = self
         tableView.delegate = self
-        
     }
     
     func makeEmojiArr() -> [Emoji] {
         
-        let e1 = Emoji.init(init:"😀", desc:"Smile face", year:23)
-        let e2 = Emoji.init(init:"😊", desc:"Nice face", year:25)
-        let e3 = Emoji.init(init:"😢", desc:"Cry face", year:21)
-        let e4 = Emoji.init(init:"🐶", desc:"Dogo face", year:23)
-        let e5 = Emoji.init(init:"🐥", desc:"Duck face", year: 11)
-        let e6 = Emoji.init(init:"🐬", desc:"Doplho face", year:1)
+        let e1 = Emoji.init(smile: "😀", desc:"Smile face", points:23)
+        let e2 = Emoji.init(smile: "😊", desc:"Nice face", points:25)
+        let e3 = Emoji.init(smile: "😢", desc:"Cry face", points:21)
+        let e4 = Emoji.init(smile: "🐶", desc:"Dogo face", points:23)
+        let e5 = Emoji.init(smile: "🐥", desc:"Duck face", points: 11)
+        let e6 = Emoji.init(smile: "🐬", desc:"Doplho face", points:1)
         return [e1,e2,e3,e4,e5,e6]
     }
     
@@ -56,12 +59,6 @@ UITableViewDelegate {
         let defVC = segue.destination as! DetailViewController
         defVC.emoji = sender as! Emoji
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     
 }
 

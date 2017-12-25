@@ -10,7 +10,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    var emoji : Emoji = Emoji.init(init: "asd", desc: "asd", year: 0)
+    var emoji : Emoji = Emoji.init(smile: "asd", desc: "asd", points: 0)
     
     
     @IBOutlet weak var emojiLabel: UILabel!
@@ -24,12 +24,6 @@ class DetailViewController: UIViewController {
         
         emojiLabel.text = emoji.eMain
         emojiDesc.text = emoji.desc
-        secondLabel.text = "Year \(emoji.year)"
+        secondLabel.text = "Year \(emoji.points)"
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 }

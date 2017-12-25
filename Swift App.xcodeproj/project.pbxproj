@@ -12,6 +12,7 @@
 		680B9AB71FB6FE0600CFF313 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 680B9AB51FB6FE0600CFF313 /* Main.storyboard */; };
 		680B9AB91FB6FE0600CFF313 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 680B9AB81FB6FE0600CFF313 /* Assets.xcassets */; };
 		680B9ABC1FB6FE0600CFF313 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 680B9ABA1FB6FE0600CFF313 /* LaunchScreen.storyboard */; };
+		685E05FF1FF14DAB007FDC17 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685E05FE1FF14DAB007FDC17 /* MainViewModel.swift */; };
 		68FC83951FB85A6600CA24EE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FC83941FB85A6600CA24EE /* DetailViewController.swift */; };
 		68FC83991FB899F000CA24EE /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FC83981FB899F000CA24EE /* Emoji.swift */; };
 /* End PBXBuildFile section */
@@ -25,6 +26,7 @@
 		680B9ABB1FB6FE0600CFF313 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		680B9ABD1FB6FE0600CFF313 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		680B9AC41FB6FFC100CFF313 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		685E05FE1FF14DAB007FDC17 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		68FC83941FB85A6600CA24EE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		68FC83981FB899F000CA24EE /* Emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,6 +61,7 @@
 		680B9AB01FB6FE0600CFF313 /* Swift App */ = {
 			isa = PBXGroup;
 			children = (
+				685E05FD1FF14D86007FDC17 /* view models */,
 				68FC83971FB899C500CA24EE /* model */,
 				68FC83961FB865A200CA24EE /* controllers */,
 				680B9AB11FB6FE0600CFF313 /* AppDelegate.swift */,
@@ -68,6 +71,14 @@
 				680B9ABD1FB6FE0600CFF313 /* Info.plist */,
 			);
 			path = "Swift App";
+			sourceTree = "<group>";
+		};
+		685E05FD1FF14D86007FDC17 /* view models */ = {
+			isa = PBXGroup;
+			children = (
+				685E05FE1FF14DAB007FDC17 /* MainViewModel.swift */,
+			);
+			path = "view models";
 			sourceTree = "<group>";
 		};
 		68FC83961FB865A200CA24EE /* controllers */ = {
@@ -159,6 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				685E05FF1FF14DAB007FDC17 /* MainViewModel.swift in Sources */,
 				68FC83951FB85A6600CA24EE /* DetailViewController.swift in Sources */,
 				680B9AB41FB6FE0600CFF313 /* MainViewController.swift in Sources */,
 				68FC83991FB899F000CA24EE /* Emoji.swift in Sources */,
@@ -303,7 +315,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5LH3ZH362W;
 				INFOPLIST_FILE = "Swift App/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.app.Swift-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -319,7 +331,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5LH3ZH362W;
 				INFOPLIST_FILE = "Swift App/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.app.Swift-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";

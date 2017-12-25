@@ -3,13 +3,12 @@
 
 class Emoji {
     var eMain : String
-    var year : Int
+    var points : Int
     var desc : String
     
-    init(init emoji : String, desc: String, year : Int) {
+    init(smile emoji : String, desc: String, points : Int) {
         self.eMain = emoji
-        self.year = year
         self.desc = desc
+        self.points = points
     }
-    
 }
